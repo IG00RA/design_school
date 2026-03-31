@@ -60,7 +60,7 @@ export function ToolsSection() {
   ];
 
   return (
-    <section className="py-10 md:py-20 px-4 sm:px-6 lg:px-8">
+    <section id="tools" className="py-10 md:py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-10 md:mb-16 space-y-3 md:space-y-4">

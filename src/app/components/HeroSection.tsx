@@ -8,52 +8,51 @@ import imgFreepik3DGlassIconOfACasinoDiceCubeWithDotsOnT497831 from "@/assets/ga
 export function HeroSection() {
   return (
     <section className="relative min-h-[100vh] flex items-center justify-center overflow-hidden px-4 pt-20">
-      <div className="hidden sm:block absolute top-[15%] left-[8%] w-20 md:w-32 h-20 md:h-32 opacity-80 animate-[float_6s_ease-in-out_infinite]">
-        <img
-          src={imgFreepik3DGlassIconOfAPlayingCardWithADiamondSui497791}
-          alt=""
-          className="w-full h-full object-contain"
-        />
-      </div>
-      <div className="absolute top-[12%] right-[5%] md:right-[10%] w-14 md:w-28 h-14 md:h-28 opacity-80 animate-[float_7s_ease-in-out_infinite_1s]">
-        <img
-          src={imgFreepik3DGlassIconOfACasinoChipWithConcentricCir497811}
-          alt=""
-          className="w-full h-full object-contain"
-        />
-      </div>
-      <div className="absolute top-[45%] right-[8%] md:right-[15%] w-16 md:w-24 h-16 md:h-24 opacity-80 animate-[float_8s_ease-in-out_infinite_2s]">
-        <img
-          src={imgFreepik3DGlassIconOfADesktopMonitorScreenShowing497821}
-          alt=""
-          className="w-full h-full object-contain"
-        />
-      </div>
-      <div className="hidden sm:block absolute top-[10%] left-[10%] md:left-[15%] w-14 md:w-20 h-14 md:h-20 opacity-80 animate-[float_6.5s_ease-in-out_infinite_0.5s]">
-        <img
-          src={imgFreepik3DGlassIconOfABrowserWindowWithARisingLi497801}
-          alt=""
-          className="w-full h-full object-contain"
-        />
-      </div>
-      <div className="absolute bottom-[20%] left-[5%] md:left-[10%] w-16 md:w-20 h-16 md:h-20 opacity-80 rotate-[17deg] animate-[float_7.5s_ease-in-out_infinite_1.5s]">
+      <div className="absolute top-[62%] md:top-[26%] left-[80%] md:left-[16%] w-18 md:w-28 h-18 md:h-28 rotate-20 animate-[float_6.5s_ease-in-out_infinite_0.5s]">
         <img
           src={imgFreepik3DGlassIconOfACasinoDiceCubeWithDotsOnT497831}
-          alt=""
+          alt="Gambling Icon"
           className="w-full h-full object-contain"
         />
       </div>
-      <div className="absolute top-[13%] right-[15%] md:right-[8%] w-20 md:w-28 h-20 md:h-28 opacity-80 animate-[float_6.8s_ease-in-out_infinite_0.8s]">
+
+      <div className="absolute top-[80%] left-[8%] md:top-[35%] md:left-[6%] w-30 md:w-55 h-30 md:h-80 animate-[float_6s_ease-in-out_infinite]">
         <img
-          src={imgFreepik3DGlassIconOfASmartphoneWithALargePlayBu497781}
-          alt=""
+          src={imgFreepik3DGlassIconOfAPlayingCardWithADiamondSui497791}
+          alt="Playing Card Icon"
           className="w-full h-full object-contain"
         />
       </div>
-      <div className="hidden sm:block absolute bottom-[10%] right-[8%] w-16 md:w-24 h-16 md:h-24 opacity-80 animate-[float_6.2s_ease-in-out_infinite_0.3s]">
+
+      <div className="absolute bottom-[4%] left-[68%] md:bottom-[10%] md:left-[15%] w-24 md:w-34 h-24 md:h-34 animate-[float_6.8s_ease-in-out_infinite_0.8s]">
+        {" "}
         <img
           src={imgFreepik3DGlassIconOfABrowserWindowWithARisingLi497801}
-          alt=""
+          alt="Browser Window Icon"
+          className="w-full h-full object-contain"
+        />
+      </div>
+
+      <div className="absolute top-[12%] right-[40%] md:right-[15%] md:top-[22%] w-16 md:w-42 h-16 md:h-42 animate-[float_7s_ease-in-out_infinite_1s]">
+        <img
+          src={imgFreepik3DGlassIconOfACasinoChipWithConcentricCir497811}
+          alt="Casino Chip Icon"
+          className="w-full h-full object-contain"
+        />
+      </div>
+
+      <div className="absolute top-[15%] right-[65%] md:right-[7%] md:top-[51%] w-22 md:w-40 h-22 md:h-40 animate-[float_8s_ease-in-out_infinite_2s]">
+        <img
+          src={imgFreepik3DGlassIconOfADesktopMonitorScreenShowing497821}
+          alt="Desktop Monitor Icon"
+          className="w-full h-full object-contain"
+        />
+      </div>
+
+      <div className="absolute bottom-[70%] right-[8%] md:right-[16%] md:bottom-[12%] w-32 md:w-48 h-32 md:h-48 animate-[float_7.5s_ease-in-out_infinite_1.5s]">
+        <img
+          src={imgFreepik3DGlassIconOfASmartphoneWithALargePlayBu497781}
+          alt="Smartphone Icon"
           className="w-full h-full object-contain"
         />
       </div>
@@ -62,7 +61,7 @@ export function HeroSection() {
       <div className="relative z-10 w-full">
         <div className="absolute inset-0">
           <div
-            className="absolute -top-[40px] left-1/2 -translate-x-1/2 w-[90vw] h-[250px] md:h-[380px] opacity-30"
+            className="absolute -top-[20px] md:-top-[40px] left-1/2 -translate-x-1/2 w-[90vw] h-[400px] md:h-[480px] opacity-30"
             style={{
               background:
                 "linear-gradient(174deg, #9333EA 8%, #C026D3 33%, #A855F7 54%, #7C3AED 75%, #6D28D9 92%)",
@@ -70,14 +69,14 @@ export function HeroSection() {
             }}
           />{" "}
           <div
-            className="absolute top-0 left-1/2 -translate-x-1/2 w-[77vw] h-[250px] md:h-[340px] opacity-20"
+            className="absolute top-0 left-1/2 -translate-x-1/2 w-[82vw] md:w-[77vw] h-[350px] md:h-[290px] opacity-20"
             style={{
               background:
                 "linear-gradient(174deg, #9333EA 8%, #C026D3 33%, #A855F7 54%, #7C3AED 75%, #6D28D9 92%)",
             }}
           />
         </div>
-        <div className="relative z-10 max-w-3xl mx-auto text-center">
+        <div className="relative z-10 max-w-[800px] mx-auto text-center">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-purple-500/15 border border-purple-400/25 backdrop-blur-md mb-6 md:mb-8">
             <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
@@ -87,27 +86,30 @@ export function HeroSection() {
           </div>
 
           {/* Heading */}
-          <h1 className="text-4xl leading-[1.05] sm:text-6xl md:text-7xl lg:text-[96px] font-black tracking-tight text-white">
+          <h1 className="text-5xl max-w-[85%] md:max-w-none leading-[1.05] sm:text-6xl md:text-7xl lg:text-[96px]  mx-auto font-black tracking-tight text-white">
             Gambling Motion
             <br />
             Design School
           </h1>
 
           {/* Description */}
-          <p className="mt-6 md:mt-8 text-base md:text-lg lg:text-xl text-[#B0A7C4] max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-6 text-base md:text-lg lg:text-[22px] text-[#B0A7C4] max-w-[85%] md:max-w-[500px] mx-auto leading-relaxed ">
             Научись создавать креативы в сфере iGaming с нуля. After Effects,
             AI-генерация, войсоверы, дипфейки и performance-маркетинг.
           </p>
 
           {/* CTA Buttons */}
-          <div className="mt-10 md:mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button className="w-full sm:w-auto px-10 py-4 rounded-full bg-gradient-to-r from-purple-600 to-violet-500 font-semibold text-lg shadow-xl shadow-purple-500/30 hover:shadow-2xl hover:shadow-purple-600/40 transition-all active:scale-[0.97] hover:scale-[1.02]">
+          <div className="mt-14 md:mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <button className="sm:w-auto px-10 py-4 rounded-full bg-gradient-to-r from-purple-600 to-violet-500 font-semibold text-lg cursor-pointer shadow-xl shadow-purple-500/30 hover:shadow-2xl hover:shadow-purple-600/40 transition-all active:scale-[0.97] hover:scale-[1.02]">
               Начать обучение →
             </button>
 
-            <button className="w-full sm:w-auto px-10 py-4 rounded-full border border-purple-400/30 text-white/80 font-semibold hover:bg-white/5 backdrop-blur-sm transition-all">
+            <a
+              href="#portfolio"
+              className="sm:w-auto px-10 py-4 rounded-full border border-purple-400/30 text-white/80 font-semibold cursor-pointer hover:bg-white/5 backdrop-blur-sm transition-all"
+            >
               Смотреть работы
-            </button>
+            </a>
           </div>
         </div>
       </div>

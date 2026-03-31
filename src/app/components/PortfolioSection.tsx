@@ -11,7 +11,17 @@ import video7 from "@/assets/video/7.mp4";
 import video8 from "@/assets/video/8.mp4";
 import video9 from "@/assets/video/9.mp4";
 
-const videos = [video1, video2, video3, video4, video5, video6, video7, video8, video9];
+const videos = [
+  video1,
+  video2,
+  video3,
+  video4,
+  video5,
+  video6,
+  video7,
+  video8,
+  video9,
+];
 
 function formatTime(seconds: number) {
   const m = Math.floor(seconds / 60);
@@ -57,21 +67,31 @@ function VideoCard({ src }: { src: string }) {
         ref={videoRef}
         src={src}
         className="absolute inset-0 w-full h-full object-cover"
-        muted
+        volume={0.5}
         playsInline
         preload="metadata"
       />
 
       {/* Play Button */}
-      <div className={`absolute inset-0 flex items-center justify-center transition-opacity ${playing ? "opacity-0 group-hover:opacity-100" : "opacity-100"}`}>
+      <div
+        className={`absolute inset-0 flex items-center justify-center transition-opacity ${playing ? "opacity-0 group-hover:opacity-100" : "opacity-100"}`}
+      >
         <button className="w-10 h-10 md:w-14 md:h-14 rounded-full bg-purple-500/25 border-2 border-purple-400/50 flex items-center justify-center group-hover:scale-110 group-hover:bg-purple-500/40 transition-all">
           {playing ? (
-            <svg className="w-4 h-4 md:w-6 md:h-6" fill="white" viewBox="0 0 24 24">
+            <svg
+              className="w-4 h-4 md:w-6 md:h-6"
+              fill="white"
+              viewBox="0 0 24 24"
+            >
               <rect x="6" y="4" width="4" height="16" rx="1" />
               <rect x="14" y="4" width="4" height="16" rx="1" />
             </svg>
           ) : (
-            <svg className="w-4 h-4 md:w-6 md:h-6" fill="white" viewBox="0 0 18 18">
+            <svg
+              className="w-4 h-4 md:w-6 md:h-6"
+              fill="white"
+              viewBox="0 0 18 18"
+            >
               <path d={svgPaths.p31874c80} />
             </svg>
           )}
@@ -90,7 +110,7 @@ function VideoCard({ src }: { src: string }) {
 
 export function PortfolioSection() {
   return (
-    <section className="py-10 md:py-20 px-4 sm:px-6 lg:px-8">
+    <section id="portfolio" className="py-10 md:py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-10 md:mb-16 space-y-3 md:space-y-4">
@@ -106,7 +126,8 @@ export function PortfolioSection() {
             </span>
           </h2>
           <p className="text-sm md:text-lg text-[#9D95B0] max-w-2xl mx-auto px-2 leading-relaxed">
-            Реальные креативы, созданные во время обучения. Каждый проект проходит ревью от действующих арт-директоров.
+            Реальные креативы, созданные во время обучения. Каждый проект
+            проходит ревью от действующих арт-директоров.
           </p>
         </div>
 
@@ -121,7 +142,13 @@ export function PortfolioSection() {
         <div className="flex justify-center mt-6 md:mt-12">
           <button className="px-6 md:px-8 py-2.5 md:py-3 rounded-full border border-purple-500/40 text-[#F1F0F5] font-semibold hover:bg-purple-500/10 transition-all flex items-center gap-2 text-sm md:text-base">
             <span>Смотреть ещё</span>
-            <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 18 18">
+            <svg
+              className="w-4 h-4 md:w-5 md:h-5"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              viewBox="0 0 18 18"
+            >
               <path d="M3.75 9H14.25" strokeLinecap="round" />
               <path d="M9 3.75L14.25 9L9 14.25" strokeLinecap="round" />
             </svg>
