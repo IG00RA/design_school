@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.figma.com)",
+      "WebSearch",
+      "WebFetch(domain:s3-alpha.figma.com)",
+      "Bash(npx vite:*)"
+    ]
+  }
+}
