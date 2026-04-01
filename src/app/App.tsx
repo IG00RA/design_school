@@ -13,15 +13,17 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#16112A] text-white overflow-x-hidden">
       <Header />
-      <HeroSection />
-      <StatsSection />
-      <PortfolioSection />
-      <ProgramSection />
-      <ToolsSection />
-      <LearningFormatSection />
-      <PricingSection />
-      <FAQSection />
-      <FinalCTASection />
+      <main>
+        <HeroSection />
+        <StatsSection />
+        <PortfolioSection />
+        <ProgramSection />
+        <ToolsSection />
+        <LearningFormatSection />
+        <PricingSection />
+        <FAQSection />
+        <FinalCTASection />
+      </main>
     </div>
   );
 }

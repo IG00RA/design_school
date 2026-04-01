@@ -7,7 +7,7 @@ import imgFreepik3DGlassIconOfACasinoDiceCubeWithDotsOnT497831 from "@/assets/ga
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-[100vh] flex items-center justify-center overflow-hidden px-4 pt-20">
+    <section className="relative min-h-[100vh] flex items-center justify-center overflow-hidden px-4 pt-20 max-w-7xl mx-auto">
       <div className="absolute top-[62%] md:top-[26%] left-[80%] md:left-[16%] w-18 md:w-28 h-18 md:h-28 rotate-20 animate-[float_6.5s_ease-in-out_infinite_0.5s]">
         <img
           src={imgFreepik3DGlassIconOfACasinoDiceCubeWithDotsOnT497831}
@@ -61,7 +61,7 @@ export function HeroSection() {
       <div className="relative z-10 w-full">
         <div className="absolute inset-0">
           <div
-            className="absolute -top-[20px] md:-top-[40px] left-1/2 -translate-x-1/2 w-[90vw] h-[400px] md:h-[480px] opacity-30"
+            className="absolute -top-[20px] md:-top-[40px] left-1/2 -translate-x-1/2 w-[95%] h-[450px] min-[405px]:h-[400px] min-[429px]:h-[350px] min-[500px]:h-[300px] md:h-[400px] lg:h-[480px] opacity-30"
             style={{
               background:
                 "linear-gradient(174deg, #9333EA 8%, #C026D3 33%, #A855F7 54%, #7C3AED 75%, #6D28D9 92%)",
@@ -69,7 +69,7 @@ export function HeroSection() {
             }}
           />{" "}
           <div
-            className="absolute top-0 left-1/2 -translate-x-1/2 w-[82vw] md:w-[77vw] h-[350px] md:h-[290px] opacity-20"
+            className="absolute top-0 left-1/2 -translate-x-1/2 w-[82vw] md:w-[85%] h-[290px] min-[405px]:h-[230px] min-[500px]:h-[180px] sm:h-[200px] md:h-[240px] lg:h-[290px] opacity-20"
             style={{
               background:
                 "linear-gradient(174deg, #9333EA 8%, #C026D3 33%, #A855F7 54%, #7C3AED 75%, #6D28D9 92%)",
@@ -80,7 +80,7 @@ export function HeroSection() {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-purple-500/15 border border-purple-400/25 backdrop-blur-md mb-6 md:mb-8">
             <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-            <span className="text-sm font-semibold text-purple-200 tracking-wide uppercase">
+            <span className="text- font-semibold text-purple-200 tracking-wide uppercase">
               Набор открыт — Поток #4
             </span>
           </div>
