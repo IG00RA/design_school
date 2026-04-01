@@ -1,4 +1,8 @@
+import { useModal } from "../ModalContext";
+
 export function PricingSection() {
+  const { openModal } = useModal();
+
   const plans = [
     {
       name: "LITE",
@@ -114,7 +118,8 @@ export function PricingSection() {
 
               {/* CTA Button */}
               <button
-                className={`w-full py-3 md:py-3.5 mt-auto rounded-full font-semibold transition-all text-sm md:text-base ${
+                onClick={() => openModal(`Выбрать план (${plan.name})`)}
+                className={`w-full py-3 md:py-3.5 mt-auto rounded-full font-semibold transition-all text-sm md:text-base cursor-pointer ${
                   plan.popular
                     ? "bg-gradient-to-br from-purple-500 to-purple-700 text-white shadow-[0_4px_30px_rgba(139,92,246,0.35)] hover:shadow-[0_8px_40px_rgba(139,92,246,0.5)] hover:scale-105"
                     : "border border-purple-500/40 text-[#F1F0F5] hover:bg-purple-500/10"

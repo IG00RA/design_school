@@ -1,3 +1,4 @@
+import { useModal } from "../ModalContext";
 import imgFreepik3DGlassIconOfASmartphoneWithALargePlayBu497781 from "@/assets/video.webp";
 import imgFreepik3DGlassIconOfAPlayingCardWithADiamondSui497791 from "@/assets/card.webp";
 import imgFreepik3DGlassIconOfABrowserWindowWithARisingLi497801 from "@/assets/web.webp";
@@ -6,6 +7,8 @@ import imgFreepik3DGlassIconOfADesktopMonitorScreenShowing497821 from "@/assets/
 import imgFreepik3DGlassIconOfACasinoDiceCubeWithDotsOnT497831 from "@/assets/gambl.webp";
 
 export function HeroSection() {
+  const { openModal } = useModal();
+
   return (
     <section className="relative min-h-[100vh] flex items-center justify-center overflow-hidden px-4 pt-20 max-w-7xl mx-auto">
       <div className="absolute top-[62%] md:top-[26%] left-[80%] md:left-[16%] w-18 md:w-28 h-18 md:h-28 rotate-20 animate-[float_6.5s_ease-in-out_infinite_0.5s]">
@@ -100,7 +103,10 @@ export function HeroSection() {
 
           {/* CTA Buttons */}
           <div className="mt-14 md:mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button className="sm:w-auto px-10 py-4 rounded-full bg-gradient-to-r from-purple-600 to-violet-500 font-semibold text-lg cursor-pointer shadow-xl shadow-purple-500/30 hover:shadow-2xl hover:shadow-purple-600/40 transition-all active:scale-[0.97] hover:scale-[1.02]">
+            <button
+              onClick={() => openModal("Начать обучение (hero)")}
+              className="sm:w-auto px-10 py-4 rounded-full bg-gradient-to-r from-purple-600 to-violet-500 font-semibold text-lg cursor-pointer shadow-xl shadow-purple-500/30 hover:shadow-2xl hover:shadow-purple-600/40 transition-all active:scale-[0.97] hover:scale-[1.02]"
+            >
               Начать обучение →
             </button>
 

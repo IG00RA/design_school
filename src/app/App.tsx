@@ -8,8 +8,12 @@ import { LearningFormatSection } from './components/LearningFormatSection';
 import { PricingSection } from './components/PricingSection';
 import { FAQSection } from './components/FAQSection';
 import { FinalCTASection } from './components/FinalCTASection';
+import { ContactModal } from './components/ContactModal';
+import { ModalProvider, useModal } from './ModalContext';
 
-export default function App() {
+function AppContent() {
+  const { isOpen, source, closeModal } = useModal();
+
   return (
     <div className="min-h-screen bg-[#16112A] text-white overflow-x-hidden">
       <Header />
@@ -24,6 +28,15 @@ export default function App() {
         <FAQSection />
         <FinalCTASection />
       </main>
+      <ContactModal isOpen={isOpen} onClose={closeModal} source={source} />
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <ModalProvider>
+      <AppContent />
+    </ModalProvider>
   );
 }

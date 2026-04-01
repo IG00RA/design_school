@@ -1,4 +1,8 @@
+import { useModal } from "../ModalContext";
+
 export function FinalCTASection() {
+  const { openModal } = useModal();
+
   return (
     <section className="py-12 md:py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
@@ -35,7 +39,10 @@ export function FinalCTASection() {
 
             {/* CTA Button */}
             <div className="pt-2 md:pt-4">
-              <button className="w-full sm:w-auto px-8 md:px-10 py-3.5 md:py-4 rounded-full bg-gradient-to-br from-purple-500 to-purple-700 text-white font-semibold text-sm md:text-lg shadow-[0_4px_30px_rgba(139,92,246,0.35)] hover:shadow-[0_8px_40px_rgba(139,92,246,0.5)] transition-all hover:scale-105">
+              <button
+                onClick={() => openModal("Записаться на курс (final CTA)")}
+                className="w-full sm:w-auto px-8 md:px-10 py-3.5 md:py-4 rounded-full bg-gradient-to-br from-purple-500 to-purple-700 text-white font-semibold text-sm md:text-lg shadow-[0_4px_30px_rgba(139,92,246,0.35)] hover:shadow-[0_8px_40px_rgba(139,92,246,0.5)] transition-all hover:scale-105 cursor-pointer"
+              >
                 Записаться на курс →
               </button>
             </div>

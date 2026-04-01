@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useModal } from "../ModalContext";
 
 const navLinks = [
   { label: "Программа", href: "#program" },
@@ -10,6 +11,7 @@ const navLinks = [
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { openModal } = useModal();
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#0A0612]/50 backdrop-blur-xl border border-b-[#8B5CF6]/20">
@@ -31,12 +33,12 @@ export function Header() {
                 {link.label}
               </a>
             ))}
-            <a
-              href="#pricing"
-              className="ml-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-purple-600 to-violet-500 text-sm font-semibold text-white shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 transition-all hover:scale-[1.03] active:scale-[0.97]"
+            <button
+              onClick={() => openModal("Записаться (header)")}
+              className="ml-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-purple-600 to-violet-500 text-sm font-semibold text-white shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 transition-all hover:scale-[1.03] active:scale-[0.97] cursor-pointer"
             >
               Записаться
-            </a>
+            </button>
           </nav>
 
           {/* Mobile hamburger */}
@@ -73,13 +75,12 @@ export function Header() {
               {link.label}
             </a>
           ))}
-          <a
-            href="#pricing"
-            className="mt-2 text-center px-6 py-3 rounded-full bg-gradient-to-r from-purple-600 to-violet-500 text-sm font-semibold text-white"
-            onClick={() => setMobileOpen(false)}
+          <button
+            className="mt-2 text-center px-6 py-3 rounded-full bg-gradient-to-r from-purple-600 to-violet-500 text-sm font-semibold text-white cursor-pointer"
+            onClick={() => { setMobileOpen(false); openModal("Записаться (mobile header)"); }}
           >
             Записаться
-          </a>
+          </button>
         </div>
       </div>
     </header>
