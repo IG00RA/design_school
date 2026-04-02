@@ -1,6 +1,12 @@
 import { useState, useEffect } from "react";
 
 const GOOGLE_SCRIPT_URL = import.meta.env.VITE_GOOGLE_SCRIPT_URL || "";
+const POSTBACK_BASE_URL = import.meta.env.VITE_POSTBACK_URL || "https://mustage-tracker.com/click";
+
+function getClickId(): string {
+  const params = new URLSearchParams(window.location.search);
+  return params.get("clickid") || "";
+}
 
 interface ContactModalProps {
   isOpen: boolean;
@@ -36,12 +42,26 @@ export function ContactModal({ isOpen, onClose, source }: ContactModalProps) {
     setStatus("sending");
 
     try {
+      const clickId = getClickId();
+
       await fetch(GOOGLE_SCRIPT_URL, {
         method: "POST",
         mode: "no-cors",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name: name.trim(), contact: contact.trim(), source }),
+        body: JSON.stringify({
+          name: name.trim(),
+          contact: contact.trim(),
+          source,
+          clickId,
+        }),
       });
+
+      // Postback to tracker
+      if (clickId) {
+        const postbackUrl = `${POSTBACK_BASE_URL}?cnv_id=${encodeURIComponent(clickId)}&payout=0&cnv_status=lead`;
+        fetch(postbackUrl, { method: "GET", mode: "no-cors" }).catch(() => {});
+      }
+
       setStatus("success");
       setName("");
       setContact("");
