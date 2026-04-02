@@ -38,6 +38,7 @@ function VideoCard({ src }: { src: string }) {
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
+    video.volume = 0.3;
     const onLoaded = () => setDuration(formatTime(video.duration));
     const onEnded = () => setPlaying(false);
     video.addEventListener("loadedmetadata", onLoaded);
@@ -68,7 +69,6 @@ function VideoCard({ src }: { src: string }) {
         ref={videoRef}
         src={src}
         className="absolute inset-0 w-full h-full object-cover"
-        volume={0.5}
         playsInline
         preload="metadata"
       />
